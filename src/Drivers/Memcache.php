@@ -259,7 +259,7 @@ class Memcache extends Common
             if (!in_array($id, $idsInTag)) {
                 $idsInTag[] = $id;
 
-                $this->doSaveScalar(implode($this->tagSeparator, $idsInTag), $tag);
+                $this->doSaveScalar(implode($this->tagSeparator, $idsInTag), $this->getPrefixedTag($tag));
             }
         }
     }
